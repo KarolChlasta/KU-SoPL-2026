@@ -21,7 +21,11 @@ def solve(id: str) -> int:
     Your id is passed as a string.
     Return an integer.
     """
-    pass
+    result = 1
+    for ch in id:
+        if ch.isdigit() and ch != '0':
+            result *= int(ch)
+    return result
 
 
 if __name__ == "__main__":

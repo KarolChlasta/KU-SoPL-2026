@@ -16,12 +16,18 @@
 
 
 def solve(id: str) -> int:
+    total = 0
     """
     Implement your task here.
     Your id is passed as a string.
     Return an integer.
     """
-    pass
+
+    for digit in id:
+        if digit.isdigit() and int(digit) >= 6:
+            total += int(digit)
+
+    return total
 
 
 if __name__ == "__main__":

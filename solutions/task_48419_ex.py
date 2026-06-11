@@ -21,7 +21,15 @@ def solve(id: str) -> int:
     Your id is passed as a string.
     Return an integer.
     """
-    pass
+    product = 1
+
+    for char in id:
+        if char.isdigit() and char != "0":
+            product = product * int(char)
+
+    return product
+
+
 
 
 if __name__ == "__main__":

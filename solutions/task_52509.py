@@ -16,13 +16,8 @@
 
 
 def solve(id: str) -> int:
-    """
-    Implement your task here.
-    Your id is passed as a string.
-    Return an integer.
-    """
-    pass
-
+    return sum(int(d) for d in id if d.isdigit() and d != "0")
+    
 
 if __name__ == "__main__":
     print(solve("52509"))

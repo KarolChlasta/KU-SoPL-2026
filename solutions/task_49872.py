@@ -21,7 +21,7 @@ def solve(id: str) -> int:
     Your id is passed as a string.
     Return an integer.
     """
-    pass
+    return sum(int(ch) for ch in id if ch.isdigit() and int(ch) < 7)
 
 
 if __name__ == "__main__":

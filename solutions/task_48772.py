@@ -1,19 +1,5 @@
 # Student ID : 48772
 # Course     : Survey of Programming Languages — KU-SoPL-2026
-#
-# ╔══════════════════════════════════════════════════════════╗
-# ║  YOUR TASK                                               ║
-# ║                                                          ║
-# ║  Return the sum of all digits in your ID.                ║
-# ║                                                          ║
-# ║  - digits are extracted from your ID string              ║
-# ║  - ignore the "-ex" suffix if present                    ║
-# ╚══════════════════════════════════════════════════════════╝
-#
-# Implement solve() below and return an integer.
-# Do NOT rename this file.
-# Run with:  python task_48772.py
-
 
 def solve(id: str) -> int:
     """
@@ -21,7 +7,7 @@ def solve(id: str) -> int:
     Your id is passed as a string.
     Return an integer.
     """
-    pass
+    return sum(int(char) for char in id if char.isdigit())
 
 
 if __name__ == "__main__":

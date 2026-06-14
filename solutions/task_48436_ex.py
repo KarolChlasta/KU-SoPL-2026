@@ -21,7 +21,24 @@ def solve(id: str) -> int:
     Your id is passed as a string.
     Return an integer.
     """
-    pass
+    # Remove "-ex" suffix if present
+    if id.endswith("-ex"):
+        id = id[:-3]
+
+    even_sum = 0
+    odd_sum = 0
+
+    for ch in id:
+        if ch.isdigit():
+            digit = int(ch)
+
+            if digit % 2 == 0:
+                even_sum += digit
+            else:
+                odd_sum += digit
+
+    return abs(even_sum - odd_sum)
+
 
 
 if __name__ == "__main__":

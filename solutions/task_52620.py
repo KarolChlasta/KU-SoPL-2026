@@ -16,12 +16,11 @@
 
 
 def solve(id: str) -> int:
-    """
-    Implement your task here.
-    Your id is passed as a string.
-    Return an integer.
-    """
-    pass
+    digits = [int(ch) for ch in id if ch.isdigit()]
+    return sum(digits) - max(digits)
+
+if __name__ == "__main__":
+    print(solve("52620"))  
 
 
 if __name__ == "__main__":

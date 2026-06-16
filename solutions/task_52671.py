@@ -16,11 +16,9 @@
 
 
 def solve(id: str) -> int:
-    """
-    Implement your task here.
-    Your id is passed as a string.
-    Return an integer.
-    """
+   def solve(id: str) -> int:
+    digits = [int(c) for c in id if c.isdigit()]
+    return sum(digits[:3])
     pass
 
 

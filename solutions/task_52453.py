@@ -16,12 +16,10 @@
 
 
 def solve(id: str) -> int:
-    """
-    Implement your task here.
-    Your id is passed as a string.
-    Return an integer.
-    """
-    pass
+    digits = [ch for ch in id.split("-")[0] if ch.isdigit()]
+    first_two = int(digits[0]) + int(digits[1])
+    last_two  = int(digits[-1]) + int(digits[-2])
+    return first_two - last_two
 
 
 if __name__ == "__main__":

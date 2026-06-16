@@ -20,8 +20,12 @@ def solve(id: str) -> int:
     Implement your task here.
     Your id is passed as a string.
     Return an integer.
+
+    Returns the sum of digits in `id` that are prime (2, 3, 5, or 7).
+    Non-digit characters (such as the "-ex" suffix) are ignored.
     """
-    pass
+    primes = {2, 3, 5, 7}
+    return sum(int(ch) for ch in id if ch.isdigit() and int(ch) in primes)
 
 
 if __name__ == "__main__":

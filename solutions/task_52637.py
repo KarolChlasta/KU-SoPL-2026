@@ -16,13 +16,12 @@
 
 
 def solve(id: str) -> int:
-    """
-    Implement your task here.
-    Your id is passed as a string.
-    Return an integer.
-    """
-    pass
-
+    if id.endswith("-ex"):
+        id = id[:-3]
+    
+    prime_digits = {'2', '3', '5', '7'}
+    
+    return sum(int(ch) for ch in id if ch in prime_digits)
 
 if __name__ == "__main__":
     print(solve("52637"))

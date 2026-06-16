@@ -21,8 +21,10 @@ def solve(id: str) -> int:
     Your id is passed as a string.
     Return an integer.
     """
-    pass
-
+    n = sum(int(ch) for ch in id if ch.isdigit())
+    while n >= 10:
+        n = sum(int(ch) for ch in str(n))
+    return n
 
 if __name__ == "__main__":
     print(solve("52561"))

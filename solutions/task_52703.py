@@ -16,11 +16,7 @@
 
 
 def solve(id: str) -> int:
-    """
-    Implement your task here.
-    Your id is passed as a string.
-    Return an integer.
-    """
+    return min(int(x) for x in id if x.isdigit() and x != '0')
     pass
 
 
